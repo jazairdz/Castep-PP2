@@ -1,0 +1,69 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 8.0                coarse energy cutoff (Ha)
+MEDIUM = 9.0                medium energy cutoff (Ha)
+FINE = 11.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.5           core radius (a.u.)
+BETA_RADIUS = 2.5           beta_rc (a.u.) - requires the presence of RINNER
+RINNER = 1.5                Rinner (a.u.) - requires the presence of BETA_RADIUS
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = USP && USP          Type: zero or more of NCP, USP, LOCAL, NCP_PROJ_ONLY, USP_PROJ_ONLY, PSEUDIZE_ONLY. LOCAL can be used only once. 
+CHANNEL_INFO_BETA_RC = 2.2 && 2.2       Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid: 7x7x7, Grid: Fine, xc-functional: PBE
+
+Sb hexagonal           
+
+Ecut             Energy              Energy Diff           a                % a                c               % c
+300        -4.80259299E+003        0.07526000        4.39909530        0.33156728        11.62889803        1.31170043
+350        -4.80266326E+003        0.00499000        4.38499108        0.00988789        11.48246400        0.03595786
+400        -4.80266424E+003        0.00401000        4.38406547       -0.01122294        11.47063712       -0.06707869
+450        -4.80266570E+003        0.00255000        4.38430049       -0.00586284        11.47571742       -0.02281875
+500        -4.80266591E+003        0.00234000        4.38339768       -0.02645350        11.47569297       -0.02303180
+550        -4.80266638E+003        0.00187000        4.38475576        0.00452079        11.47055344       -0.06780774
+600        -4.80266731E+003        9.400000e-004     4.38415709       -0.00913331        11.47592820       -0.02098249
+650        -4.80266784E+003        4.100000e-004     4.38369923       -0.01957589        11.47349290       -0.04219897
+700        -4.80266794E+003        3.100000e-004     4.38422838       -0.00750740        11.47335707       -0.04338235
+750        -4.80266801E+003        2.400000e-004     4.38403711       -0.01186965        11.47761537       -0.00628370
+800        -4.80266825E+003                          4.38455754                          11.47833664        
+        
+Structure validation
+====================
+
+PBESOL, 600 eV, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %
+AlSb  6.156    6.135      0.3     
+ScSb  5.804    5.852     -0.8
+GaSb  6.111    6.118     -0.1
+InSb  6.518    6.47877    0.6
+AuSb2 6.668    6.6583     0.1 
+PtSb2 6.458    6.4423     0.2     
+PtSb  4.168    4.13       0.9       5.465  5.472    -0.1
+DySb  6.107    6.153     -0.8   (FM)
+TbSb  6.123    6.178     -0.9   (FM)
+HoSb  6.120    6.131     -0.2   (FM)
+TmSb  6.173    6.083      1.5   (FM)
+GdSb  6.182    6.217     -0.6   (FM)
+BkSb  6.154    6.191     -0.6   (FM)
+CfSb  6.172    6.166      0.1   (FM)
+ThSb  6.279    6.318     -0.6   (FM)
+AmSb  6.249    6.24       0.1   (FM)
+NdSb  6.234    6.309     -1.2   (AFM)
+
+END_COMMENT
+

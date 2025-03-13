@@ -1,0 +1,71 @@
+CHARGE = 4                  number of valence electrons
+COARSE = 5.0                coarse energy cutoff (Ha)
+MEDIUM = 7.0                medium energy cutoff (Ha)
+FINE =   9.0                fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.6           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convegence testing
+==================
+Si crystal
+
+Ecut           Energy        Energy Diff         a            % a
+100     -4.39696649E+002    2.20574100      5.43999783  0.07750771
+150     -4.41132773E+002    0.76961700      5.44756354  0.21669106
+200     -4.41697783E+002    0.20460700      5.43839804  0.04807697
+250     -4.41845946E+002    0.05644400      5.43617196  0.00712460
+300     -4.41889254E+002    0.01313600      5.43641095  0.01152122
+350     -4.41898256E+002    0.00413400      5.43588738  0.00188931
+400     -4.41900007E+002    0.00238300      5.43586057  0.00139611
+450     -4.41900682E+002    0.00170800      5.43581925  6.359197e-004
+500     -4.41900916E+002    0.00147400      5.43581665  5.881621e-004
+550     -4.41901090E+002    0.00130000      5.43581146  4.926541e-004
+600     -4.41901287E+002    0.00110300      5.43580065  2.937546e-004
+650     -4.41901632E+002    7.580000e-004   5.43580456  3.657208e-004
+700     -4.41902022E+002    3.680000e-004   5.43579359  1.638556e-004
+750     -4.41902257E+002    1.330000e-004   5.43578357  -2.041678e-005
+800     -4.41902390E+002                    5.43578468    
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+           a        a exp    delta a %     c    c exp   delta c %      b    b exp   delta b %
+Mg2Si    6.308     6.338      -0.5
+Si       5.423     5.423       0.0
+CoSi2    5.311     5.356      -0.8
+Cr3Si    4.466     4.555      -2.0
+FeSi2    2.675     2.684      -0.3       5.103  5.128    -0.5
+MoSi2    3.196     3.2064     -0.3       7.823  7.8478   -0.3
+PdSi     5.560     5.6173     -1.0       6.098  6.1534   -0.9        3.464  3.3909   2.2
+SiC      4.347     4.34        0.2
+NbSi2    4.784     4.79       -0.1       6.560  6.59     -0.5
+TaSi2    4.790     4.77        0.4       6.547  6.55      0.0
+VSi2     4.530      4.57      -0.9       6.312  6.37     -0.9
+CrSi2    4.365     4.43       -1.5       6.310  6.36     -0.8
+Si3N4    7.603     7.602       0.0       2.902  2.906    -0.1
+CoSi     4.387     4.444      -1.3    
+ZrSiO4   6.613     6.5991      0.2       5.969  5.9841   -0.3
+SrAu2Si2 4.504     4.370       3.1       9.512 10.14     -6.2
+MnSi     4.454     4.548      -2.1
+ThSi2    4.129     4.136      -0.2       4.116  4.126    -0.2
+GdSi     7.981     7.996      -0.2       3.853  3.859    -0.2        5.743   5.753  -0.2 
+
+END_COMMENT

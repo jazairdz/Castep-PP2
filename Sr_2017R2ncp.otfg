@@ -1,0 +1,69 @@
+CHARGE = 10                 number of valence electrons
+COARSE = 5.5                coarse energy cutoff (Ha)
+MEDIUM = 7.7                medium energy cutoff (Ha)
+FINE = 9.2                  fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.0           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0               delta E0            a             delta a %
+    Sr          
+150        -8.85656668E+002   2.81670300        6.96527886       15.49883995
+200        -8.88029617E+002   0.44375400        6.25037402        3.64422779
+250        -8.88411490E+002   0.06188100        6.07634770        0.75850867
+300        -8.88465670E+002   0.00770100        6.04045096        0.16326596
+350        -8.88470308E+002   0.00306300        6.02922206       -0.02293258
+400        -8.88471041E+002   0.00233000        6.03002994       -0.00953636
+450        -8.88471806E+002   0.00156500        6.03024409       -0.00598526
+500        -8.88472310E+002   0.00106100        6.03057877       -4.355544e-004
+550        -8.88472554E+002   8.170000e-004     6.03056020       -7.434745e-004
+600        -8.88472724E+002   6.470000e-004     6.03045227       -0.00253326
+650        -8.88472905E+002   4.660000e-004     6.03046940       -0.00224920
+700        -8.88473090E+002   2.810000e-004     6.03053017       -0.00124138
+750        -8.88473251E+002   1.200000e-004     6.03054560       -9.856243e-004
+800        -8.88473371E+002                     6.03060504        
+exp                                             6.059    
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+           a        a exp    delta a %     c    c exp   delta c %
+SrTiO3    3.896     3.898      -0.1
+Sr        5.938     6.059      -2.0
+SrAu2Si2  4.387     4.370       0.4     10.067  10.14    -0.7
+SrCl2     6.903     6.965      -0.9
+SrF2      5.749     5.7996     -0.9
+SrFBr     4.168     4.218      -1.2      7.315   7.337   -0.3
+SrFCl     4.077     4.126      -1.2      6.909   6.958   -0.7
+SrHfO3    4.084     4.069       0.4
+SrMoO3    3.959     3.965      -0.2
+SrO       5.118     5.1602     -0.8
+
+END_COMMENT
+
