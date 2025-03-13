@@ -1,0 +1,68 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 15.0               coarse energy cutoff (Ha)
+MEDIUM = 19.0               medium energy cutoff (Ha)
+FINE = 21.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut             E0           delta E0            a         c         delta a %      delta c %
+    Ti
+300     -3.14007597E+003    27.43288000     2.98346443  4.73727797  1.10294446      1.29215775
+350     -3.15424666E+003    13.26219000     3.01739803  4.80157247  2.25287835      2.66689829
+400     -3.16117439E+003    6.33446000      2.93243481  4.66319874  -0.62633532     -0.29179933
+450     -3.16479873E+003    2.71012000      2.96328878  4.70585568  0.41923703      0.62028837
+500     -3.16653295E+003    0.97590000      2.96235765  4.69682556  0.38768287      0.42720699
+550     -3.16722700E+003    0.28185000      2.95229044  4.68041797  0.04652765      0.07638091
+600     -3.16743686E+003    0.07199000      2.95161196  4.67867829  0.02353559      0.03918323
+650     -3.16747111E+003    0.03774000      2.95086111  4.67801134  -0.00190893     0.02492259
+700     -3.16750510E+003    0.00375000      2.95097977  4.67694065  0.00211197      0.00202928
+750     -3.16750561E+003    0.00324000      2.95088823  4.67680152  -9.900245e-004  -9.457014e-004
+800     -3.16750630E+003    0.00255000      2.95088951  4.67680028  -9.467178e-004  -9.722648e-004
+850     -3.16750751E+003    0.00134000      2.95091052  4.67683521  -2.347436e-004  -2.252887e-004
+900     -3.16750846E+003    3.900000e-004   2.95092674  4.67685852  3.150796e-004   2.731735e-004
+950     -3.16750882E+003    3.000000e-005   2.95092371  4.67685423  2.122791e-004   1.814084e-004
+1000    -3.16750885E+003                    2.95091744  4.67684575  
+exp                                         2.9506      4.6788  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+Ti     2.921     2.9506     -1.0      4.604  4.6788   -1.6
+TiC    4.306     4.319      -0.3
+TiN    4.216     4.238      -0.5
+TiB2   3.023     3.0236      0.0      3.197  3.2204   -0.7
+SrTiO3 3.895     3.898      -0.1
+LaTiO3 5.512     5.625      -2.0      5.561  5.592    -0.6     7.873  7.905    -0.4
+    
+END_COMMENT
+

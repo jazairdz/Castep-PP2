@@ -1,0 +1,58 @@
+CHARGE = 6                  number of valence electrons
+COARSE = 4.8                coarse energy cutoff (Ha)
+MEDIUM = 7.4                medium energy cutoff (Ha)
+FINE = 9.2                  fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0            delta E0          a          delta a %          c          delta c %
+    Te         
+100     -1.70069861E+003     4.66449000     4.85945388     8.98096969     5.92646693    -0.68647728
+150     -1.71058481E+003     1.36909000     4.54976431     2.03568932     6.01720592     0.83409300
+200     -1.71386514E+003     0.27564667     4.58952445     2.92737342     5.98679142     0.32441800
+250     -1.71458166E+003     0.03680667     4.47706793     0.40535755     5.97237515     0.08283552
+300     -1.71468260E+003     0.00316000     4.46451450     0.12382695     5.96849927     0.01788498
+350     -1.71469045E+003     5.433333e-004  4.45978009     0.01765031     5.96726945    -0.00272387
+400     -1.71469132E+003     2.533333e-004  4.45917756     0.00413762     5.96740863    -3.914102e-004
+450     -1.71469167E+003     1.366667e-004  4.45917734     0.00413264     5.96767918     0.00414237
+500     -1.71469178E+003     1.000000e-004  4.45899850     1.217029e-004  5.96749617     0.00107553
+550     -1.71469191E+003     5.666667e-005  4.45895470    -8.603961e-004  5.96744083     1.481809e-004
+600     -1.71469208E+003                    4.45899307                    5.96743199     
+exp                                         4.456                         5.921   
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %                          
+ZnTe  6.075     6.066       0.1
+YTe   6.071     6.095      -0.4
+RhTe2 6.451     6.4394      0.2
+CdTe  6.487     6.48        0.1
+SnTe  6.291     6.313      -0.3
+BaTe  6.952     6.986      -0.5
+HgTe  6.517     6.465       0.8
+PbTe  6.436     6.4384      0.0
+EuTe  6.437     6.591      -2.3
+TbTe  5.988     6.115      -2.1
+TmTe  6.267     6.042       3.7
+HoTe  6.072     6.072       0.0
+
+                        
+END_COMMENT

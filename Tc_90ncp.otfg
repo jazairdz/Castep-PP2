@@ -1,0 +1,64 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 16.5               coarse energy cutoff (Ha)
+MEDIUM = 22.4               medium energy cutoff (Ha)
+FINE = 25.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = LOCAL   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBESOL
+System: metallic Tc
+Ecut         E0               delta E0            a        delta a %           c        delta c %
+300     -4.65819350E+003    14.18292000     2.70739876    -1.63163903     4.35464742    -1.24397256
+350     -4.66958550E+003     8.48692000     2.81166797     2.15679133     4.49192022     1.86914206
+400     -4.67669127E+003     4.93403500     2.78358887     1.13658872     4.46691693     1.30210983
+450     -4.68077671E+003     2.89131500     2.74739806    -0.17833774     4.41157197     0.04697991
+500     -4.68327572E+003     1.64181000     2.75746137     0.18729379     4.41230858     0.06368506
+550     -4.68482797E+003     0.86568500     2.76399568     0.42470600     4.42312069     0.30888543
+600     -4.68571507E+003     0.42213500     2.75956445     0.26370552     4.42202383     0.28401036
+650     -4.68617009E+003     0.19462500     2.75336553     0.03847907     4.41275593     0.07383020
+700     -4.68639470E+003     0.08232000     2.75324127     0.03396438     4.41115054     0.03742261
+750     -4.68649984E+003     0.02975000     2.75346544     0.04210936     4.41084641     0.03052554
+800     -4.68654213E+003     0.00860500     2.75297026     0.02411763     4.41037091     0.01974201
+850     -4.68655554E+003     0.00190000     2.75255335     0.00896990     4.40981827     0.00720892
+900     -4.68655851E+003     4.150000e-004  2.75235701     0.00183637     4.40960009     0.00226100
+950     -4.68655893E+003     2.050000e-004  2.75231455     2.937951e-004  4.40951313     2.889297e-004
+1000    -4.68655934E+003                    2.75230647                    4.40950039     
+exp                                         2.735                         4.388  
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+Tc     2.725     2.735      -0.4       4.368  4.388    -0.5
+CsTcO4 5.741     5.718       0.4      14.396 14.304     0.6      5.946  5.918     0.5
+TcAgO4 5.277     5.3026     -0.5      11.429 11.81     -3.2       
+
+END_COMMENT

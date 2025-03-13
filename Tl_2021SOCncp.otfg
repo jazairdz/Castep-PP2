@@ -1,0 +1,61 @@
+CHARGE = 13                 number of valence electrons
+COARSE = 8.0                coarse energy cutoff (Ha)
+MEDIUM = 10.0               medium energy cutoff (Ha)
+FINE = 12.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 5.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut         Energy            Energy Diff       a          c          % a              %c
+    Tl 
+300     -2.68948834E+003    0.09411500      3.47023188  5.54674480  0.18998243      0.19665733
+350     -2.68966939E+003    0.00359000      3.46393063  5.53630081  0.00805727      0.00799653
+400     -2.68967105E+003    0.00276000      3.46367771  5.53590118  7.551535e-004   7.776832e-004
+450     -2.68967362E+003    0.00147500      3.46470151  5.53749096  0.03031372      0.02949554
+500     -2.68967430E+003    0.00113500      3.46514017  5.53817103  0.04297832      0.04178027
+550     -2.68967547E+003    5.500000e-004   3.46515580  5.53819564  0.04342964      0.04222495
+600     -2.68967598E+003    2.950000e-004   3.46515731  5.53819873  0.04347320      0.04228069
+650     -2.68967602E+003    2.750000e-004   3.46515146  5.53818856  0.04330422      0.04209699
+700     -2.68967630E+003    1.350000e-004   3.46515389  5.53819213  0.04337453      0.04216151
+750     -2.68967654E+003    1.500000e-005   3.46515717  5.53819480  0.04346918      0.04220974
+800     -2.68967656E+003    5.000000e-006   3.46515413  5.53818957  0.04338142      0.04211521
+850     -2.68967672E+003    -7.500000e-005  3.46515106  5.53818617  0.04329288      0.04205385
+900     -2.68967591E+003    3.300000e-004   3.46364862  5.53585375  -8.446785e-005  -7.910829e-005
+950     -2.68967648E+003    4.500000e-005   3.46378372  5.53606349  0.00381591      0.00370965
+1000    -2.68967657E+003                    3.46365155  5.53585813  
+ 
+
+Structure validation
+====================
+WC, Ultra-Fine
+        a        a exp    delta a %   
+MgTl  3.594      3.628     -0.9
+NaTl  7.469      7.483     -0.2
+TlBr  3.967      3.97      -0.1
+TlCl  3.831      3.834     -0.1
+Np3Tl 4.696      4.712     -0.3
+
+END_COMMENT
+

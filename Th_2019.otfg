@@ -1,0 +1,67 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 6.0                coarse energy cutoff (Ha)
+MEDIUM = 7.0                medium energy cutoff (Ha)
+FINE = 8.0                  fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = USP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 7          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP  Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBE
+System: fcc Th
+Ecut       Energy           Energy Diff         a            % a     
+200   -1.14249683E+003    0.12701000      5.30401400  0.24983008
+250   -1.14260729E+003    0.01655000      5.29228100  0.02806761
+300   -1.14262229E+003    0.00155000      5.29129600  0.00945037
+350   -1.14262343E+003    4.100000e-004   5.29086400  0.00128525
+400   -1.14262351E+003    3.300000e-004   5.29082000  4.536180e-004
+450   -1.14262365E+003    1.900000e-004   5.29082000  4.536180e-004
+500   -1.14262375E+003    9.000000e-005   5.29081600  3.780150e-004
+550   -1.14262378E+003    6.000000e-005   5.29080200  1.134040e-004
+600   -1.14262378E+003    6.000000e-005   5.29079500 -1.890070e-005
+650   -1.14262380E+003    4.000000e-005   5.29079600  0
+700   -1.14262381E+003    3.000000e-005   5.29079900  5.670220e-005
+1000  -1.14262384E+003                    5.29079600  
+
+
+Structure validation
+====================
+
+PBESOL, 600 eV, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %   c        c exp    delta c %
+Th     5.225     5.0842     2.8
+ThN    5.243     5.167      1.5
+ThO2   5.694     5.592      1.8
+ThO    5.782     5.682      1.8
+ThCu2  4.348     4.387     -0.9      3.598     3.472       3.6
+ThSi2  4.218     4.136      2.0      4.116     4.126      -0.2
+ThC    5.399     5.346      1.0
+ThP    5.895     5.84       0.9
+ThS    5.782     5.682      1.8
+ThAs   6.041     5.978      1.1
+ThSe   6.002     5.875      2.2
+ThSb   6.386     6.318      1.1
+
+END_COMMENT
+
