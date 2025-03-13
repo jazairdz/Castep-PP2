@@ -1,0 +1,74 @@
+CHARGE = 14                 number of valence electrons
+COARSE = 17.6               coarse energy cutoff (Ha)
+MEDIUM = 22.8               medium energy cutoff (Ha)
+FINE = 25.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 7          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+Ecut              E0          delta E0            a       delta a %
+    U    
+400     -1.76589197E+003    7.26903000      3.70537668  7.41477125
+450     -1.76883952E+003    4.32148000      3.38766166  -1.79543567
+500     -1.77081817E+003    2.34283000      3.53678044  2.52735288
+550     -1.77212334E+003    1.03766000      3.46724865  0.51170314
+600     -1.77277212E+003    0.38888000      3.47149578  0.63482261
+650     -1.77301646E+003    0.14454000      3.45492886  0.15456611
+700     -1.77311820E+003    0.04280000      3.45449731  0.14205590
+750     -1.77315116E+003    0.00984000      3.45138238  0.05175745
+800     -1.77315933E+003    0.00167000      3.45014841  0.01598590
+850     -1.77316071E+003    2.900000e-004   3.44970389  0.00309989
+900     -1.77316084E+003    1.600000e-004   3.44960075  1.099576e-004
+950     -1.77316087E+003    1.300000e-004   3.44959263  -1.255564e-004
+1000    -1.77316092E+003    8.000000e-005   3.44960117  1.222601e-004
+1050    -1.77316096E+003    4.000000e-005   3.44960093  1.152466e-004
+1100    -1.77316098E+003    2.000000e-005   3.44959823  3.681730e-005
+1150    -1.77316099E+003    1.000000e-005   3.44958533  -3.369750e-004
+1200    -1.77316100E+003                    3.44959696  
+
+Structure validation
+====================
+WC, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %   c       c exp   delta c %
+UN     4.872    4.89       -0.4
+UN2    5.245    5.31       -1.2
+UC     4.906    4.9554     -1.0
+UC2    3.495    3.509      -0.4      5.943    5.980     -0.6
+US     5.462    5.50       -0.7
+UO2    5.412    5.468      -1.0   
+
+END_COMMENT
+

@@ -1,0 +1,46 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 4.8                coarse energy cutoff (Ha)
+MEDIUM = 8.5                medium energy cutoff (Ha)
+FINE = 10.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0            delta E0            a          delta a %
+    Xe  
+100     -6.92547081E+002     5.03577800     6.26703185    -10.80666994
+150     -6.95444546E+002     2.13831300     8.10863035     15.40323396
+200     -6.97004912E+002     0.57794700     8.32529353     18.48681664
+250     -6.97477562E+002     0.10529700     8.08263676     15.03328934
+300     -6.97573938E+002     0.00892100     7.23818228      3.01488744
+350     -6.97582042E+002     8.170000e-004  7.02725915      0.01299810
+400     -6.97582194E+002     6.650000e-004  7.01815350     -0.11659484
+450     -6.97582499E+002     3.600000e-004  7.02143296     -0.06992108
+500     -6.97582620E+002     2.390000e-004  7.01221176     -0.20115854
+550     -6.97582694E+002     1.650000e-004  7.01925347     -0.10093984
+600     -6.97582859E+002                    7.02634586     
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a % 
+XeF2  2.000     1.983       0.9 (bond length)
+                
+END_COMMENT
+

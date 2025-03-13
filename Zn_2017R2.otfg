@@ -1,0 +1,59 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 11.0               coarse energy cutoff (Ha)
+MEDIUM = 12.8               medium energy cutoff (Ha)
+FINE = 14.5                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+BETA_RADIUS = 2.2           beta_rc (a.u.) - requires the presence of RINNER
+RINNER = 1.4                Rinner (a.u.) - requires the presence of BETA_RADIUS
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = USP && USP          Type: zero or more of NCP, USP, LOCAL, NCP_PROJ_ONLY, USP_PROJ_ONLY, PSEUDIZE_ONLY. LOCAL can be used only once. 
+CHANNEL_INFO_BETA_RC = 2.0 && 2.0       Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0                   delta E0           a              delta a %            c             delta c %
+    Zn    
+300        -3.57209947E+003        2.49236000        2.69066833        2.69322851        6.97652039       33.56193928
+350        -3.57415634E+003        0.43549000        2.73044224        4.21125708        4.84657864       -7.21471373
+400        -3.57454600E+003        0.04583000        2.74153828        4.63475319        4.62617006      -11.43432402
+450        -3.57458539E+003        0.00644000        2.62160099        0.05717397        5.22992596        0.12427604
+500        -3.57459134E+003        4.900000e-004     2.62025802        0.00591779        5.22385914        0.00812981
+550        -3.57459146E+003        3.700000e-004     2.62017190        0.00263068        5.22338497       -9.478632e-004
+600        -3.57459160E+003        2.300000e-004     2.62011301        3.830903e-004     5.22345712        4.334615e-004
+650        -3.57459167E+003        1.600000e-004     2.62010600        1.155239e-004     5.22348774        0.00101969
+700        -3.57459168E+003        1.500000e-004     2.62010333        1.381619e-005     5.22344110        1.266972e-004
+750        -3.57459174E+003        9.000000e-005     2.62010176       -4.644793e-005     5.22342321       -2.157552e-004
+800        -3.57459183E+003                          2.62010297                          5.22343448        
+exp                                                  2.659                               4.8632  
+
+Structure validation
+====================
+
+PBESOL, 600 eV, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+MgZn2 5.107     5.222      -2.2      8.476   8.568     -1.1
+ZnO   3.232     3.2489     -0.5      5.217   5.2053     0.2
+ZnS   5.356     5.4102     -1.0      
+ZnSe  5.634     5.6676     -0.6
+ZnTe  6.074     6.066       0.1
+
+END_COMMENT
+

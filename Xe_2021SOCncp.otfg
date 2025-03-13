@@ -1,0 +1,50 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 4.8                coarse energy cutoff (Ha)
+MEDIUM = 8.5                medium energy cutoff (Ha)
+FINE = 10.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut        E0            delta E0            a          delta a %
+    Xe  
+100 -6.92719027E+002    5.07125600      5.71746030  -0.07590783
+150 -6.95672110E+002    2.11817300      5.72529299  0.06098421
+200 -6.97235061E+002    0.55522200      5.72533191  0.06166431
+250 -6.97699898E+002    0.09038500      5.72420725  0.04200864
+300 -6.97782604E+002    0.00767900      5.72224854  0.00777626
+350 -6.97789171E+002    0.00111200      5.72184568  7.355569e-004
+400 -6.97789289E+002    9.940000e-004   5.72180505  2.536182e-005
+450 -6.97789617E+002    6.660000e-004   5.72180896  9.373800e-005
+500 -6.97789738E+002    5.450000e-004   5.72180693  5.821461e-005
+550 -6.97789820E+002    4.630000e-004   5.72180431  1.245273e-005
+600 -6.97789989E+002    2.940000e-004   5.72180345  -2.534722e-006
+650 -6.97790150E+002    1.330000e-004   5.72180422  1.099876e-005
+700 -6.97790232E+002    5.100000e-005   5.72180458  1.725351e-005
+750 -6.97790258E+002    2.500000e-005   5.72180349  -1.864379e-006
+800 -6.97790283E+002                    5.72180360     
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a % 
+XeF2  2.031     1.983       2.4 (bond length)
+                
+END_COMMENT
+

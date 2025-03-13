@@ -1,0 +1,65 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 34.0               coarse energy cutoff (Ha)
+MEDIUM = 39.0               medium energy cutoff (Ha)
+FINE = 46.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 4.5             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 9.5             As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0             delta E0          a            c       delta a %        delta c %
+    Zn 
+900     -3.47708315E+003    3.78687500      3.10368522  5.43422699  18.41388961     3.89451772
+950     -3.48106350E+003    1.79670000      2.91752956  5.00122311  11.31155351     -4.38388678
+1000    -3.48307504E+003    0.79093000      2.82422730  4.79082692  7.75182265      -8.40635607
+1050    -3.48401487E+003    0.32101500      2.71458596  4.99533347  3.56871247      -4.49648815
+1100    -3.48441709E+003    0.11990500      2.65837999  5.15927759  1.42430451      -1.36211509
+1150    -3.48460270E+003    0.02710000      2.70459677  4.78159268  3.18759825      -8.58290132
+1200    -3.48465740E+003    -2.500000e-004  2.69950542  4.76425428  2.99334958      -8.91438635
+1250    -3.48465037E+003    0.00326500      2.62197783  5.23522412  0.03546474      0.08987216
+1300    -3.48465200E+003    0.00245000      2.62129264  5.23071801  0.00932272      0.00372190
+1350    -3.48465218E+003    0.00236000      2.62100014  5.23015173  -0.00183675     -0.00710446
+1400    -3.48465319E+003    0.00185500      2.62091726  5.23077462  -0.00499909     0.00480416
+1450    -3.48465467E+003    0.00111500      2.62120653  5.23069095  0.00603767      0.00320465
+1500    -3.48465593E+003    4.850000e-004   2.62106795  5.23148402  7.503312e-004   0.01836696
+1550    -3.48465664E+003    1.300000e-004   2.62107438  5.23144794  9.958285e-004   0.01767716
+1600    -3.48465690E+003                    2.62104828  5.23052333  
+exp                                         2.6649      4.9468  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+MgZn2 5.098     5.222      -2.4      8.452   8.568     -1.4
+ZnO   3.225     3.2489     -0.7      5.208   5.2053     0.0
+ZnS   5.353     5.4102     -1.1
+ZnSe  5.644     5.6676     -0.4
+ZnTe  6.082     6.066       0.3
+
+END_COMMENT
+

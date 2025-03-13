@@ -1,0 +1,75 @@
+CHARGE = 13                 number of valence electrons
+COARSE = 28.0               coarse energy cutoff (Ha)
+MEDIUM = 35.0               medium energy cutoff (Ha)
+FINE = 39.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.6           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP    Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BETA_RC = 1.4 && 1.4       Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 10.0            As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0            delta E0             a          delta a %
+    V 
+500     -1.94224345E+003    10.78215000       2.92657416    -2.33473928
+550     -1.94448655E+003     8.53905000       2.97303772    -0.78416309
+600     -1.94663090E+003     6.39470000       3.09883754     3.41401254
+650     -1.94845006E+003     4.57554000       3.04730394     1.69423949
+700     -1.94980859E+003     3.21701000       2.96162349    -1.16507731
+750     -1.95078393E+003     2.24167000       2.94225972    -1.81128257
+800     -1.95144474E+003     1.58086000       3.00075946     0.14096307
+850     -1.95204678E+003     0.97882000       3.06086816     2.14690302
+900     -1.95245653E+003     0.56907000       3.01799474     0.71613668
+950     -1.95270226E+003     0.32334000       2.99828744     0.05846709
+1000    -1.95284373E+003     0.18187000       2.99173081    -0.16033979
+1050    -1.95292338E+003     0.10222000       2.99428415    -0.07512994
+1100    -1.95297138E+003     0.05422000       2.99813440     0.05335999
+1150    -1.95300087E+003     0.02473000       2.99928837     0.09187026
+1200    -1.95301578E+003     0.00982000       2.99718848     0.02179296
+1250    -1.95302204E+003     0.00356000       2.99673286     0.00658791
+1300    -1.95302448E+003     0.00112000       2.99667088     0.00451947
+1350    -1.95302533E+003     2.700000e-004    2.99659306     0.00192249
+1400    -1.95302556E+003     4.000000e-005    2.99656149     8.691723e-004
+1450    -1.95302559E+003     1.000000e-005    2.99654219     2.250214e-004
+1500    -1.95302560E+003                      2.99653545     
+exp                                           3.023
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %      
+VSi2  4.525      4.57      -1.0       6.312  6.37     -0.9
+V     2.960      3.023     -2.1    
+VC    4.117      4.165     -1.2    
+VN    4.072      4.13      -1.4  
+        
+END_COMMENT
+

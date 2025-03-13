@@ -1,0 +1,68 @@
+CHARGE = 11                 number of valence electrons
+COARSE = 6.2                coarse energy cutoff (Ha)
+MEDIUM = 8.1                medium energy cutoff (Ha)
+FINE = 10.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.0           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut        E0            delta E0           a            delta a %             c            delta c %
+    Y                   
+150    -2.16327596E+003  6.25253000        4.09556174     12.42483715        6.45313854    13.12590217
+200    -2.17334111E+003  1.21995500        3.75923114      3.19242535        5.92093270     3.79613713
+250    -2.17537136E+003  0.20483000        3.67979668      1.01191706        5.77361093     1.21353208
+300    -2.17571900E+003  0.03101000        3.64864262      0.15672547        5.71547972     0.19447063
+350    -2.17576813E+003  0.00644500        3.64421610      0.03521574        5.70627531     0.03311377
+400    -2.17577372E+003  0.00365000        3.64291209     -5.799527e-004     5.70433134    -9.647128e-004
+450    -2.17577619E+003  0.00241500        3.64285332     -0.00219312        5.70446725     0.00141789
+500    -2.17577812E+003  0.00145000        3.64286736     -0.00180791        5.70428320    -0.00180850
+550    -2.17577911E+003  9.550000e-004     3.64299133      0.00159529        5.70470136     0.00552199
+600    -2.17577969E+003  6.650000e-004     3.64284758     -0.00235076        5.70398646    -0.00701048
+650    -2.17578003E+003  4.950000e-004     3.64302721      0.00258024        5.70483119     0.00779791
+700    -2.17578033E+003  3.450000e-004     3.64288243     -0.00139407        5.70433893    -8.316735e-004
+750    -2.17578066E+003  1.800000e-004     3.64294356      2.839740e-004     5.7043709     -2.700462e-004
+800    -2.17578102E+003                    3.64293322                        5.70438637        
+exp                                        3.6451                            5.7305  
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a       a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+Y     3.595     3.6451      -1.4     5.610  5.7305   -2.1
+YB6   4.073     4.113       -1.0
+YAs   5.741     5.786       -0.8
+YF3   6.288     6.353       -1.0     4.388  4.393    -0.1      6.825   6.850   -0.4
+YH2   5.138     5.199       -1.2
+YN    4.845     4.877       -0.7
+YTe   6.071     6.095       -0.4
+YPo   6.240     6.251       -0.2
+
+END_COMMENT
+
