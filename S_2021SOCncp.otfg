@@ -1,0 +1,72 @@
+CHARGE = 6                  number of valence electrons
+COARSE = 6.0                coarse energy cutoff (Ha)
+MEDIUM = 8.0                medium energy cutoff (Ha)
+FINE =   9.6                fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut         E0         delta E0            a           delta a %
+    S2  
+200 -6.05857477E+002    0.65644500      1.91930608  0.77014735
+250 -6.06351038E+002    0.16288400      1.91084384  0.32585104
+300 -6.06480677E+002    0.03324500      1.90627668  0.08605919
+350 -6.06504086E+002    0.00983600      1.90511678  0.02516055
+400 -6.06506677E+002    0.00724500      1.90494303  0.01603792
+450 -6.06507982E+002    0.00594000      1.90492161  0.01491345
+500 -6.06509657E+002    0.00426500      1.90487671  0.01255632
+550 -6.06510873E+002    0.00304900      1.90477239  0.00707897
+600 -6.06511511E+002    0.00241100      1.90471854  0.00425149
+650 -6.06511951E+002    0.00197100      1.90468582  0.00253368
+700 -6.06512390E+002    0.00153200      1.90467733  0.00208795
+750 -6.06512862E+002    0.00106000      1.90469575  0.00305522
+800 -6.06513300E+002    6.220000e-004   1.90468125  0.00229350
+850 -6.06513659E+002    2.630000e-004   1.90466290  0.00133028
+900 -6.06513922E+002                    1.90463756  
+exp                                     1.889   
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c     c exp    delta c %     
+BeS    4.820     4.866      -0.9     
+FeS2   5.327     5.418      -1.7
+ZnS    5.353     5.4102     -1.1
+RbS2   7.695     7.65        0.6
+CdS    5.834     5.832       0.0
+BaS    6.347     6.3875     -0.6
+HgS    5.874     5.8517      0.4
+WS2    3.153     3.18       -0.8      12.704 12.5       1.6
+PbS    5.869     5.9143     -0.8
+PtS    3.472     3.471       0.0       6.083  6.1084   -0.4
+ThS    5.672     5.682      -0.2   (FM)
+CeS    5.603     5.777      -3.0
+EuS    5.938     5.971      -0.6
+PuS    5.528     5.536      -0.1
+CmS2   3.914     3.926      -0.3       7.994  8.01     -0.2
+US     5.462     5.50       -0.7
+NpS    5.504     5.532      -0.5
+
+END_COMMENT
+
